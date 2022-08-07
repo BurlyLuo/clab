@@ -1,0 +1,12 @@
+apiVersion: projectcalico.org/v3
+items:
+- apiVersion: projectcalico.org/v3
+  kind: BGPConfiguration
+  metadata:
+    name: default
+  spec:
+    # asNumber: 65005(define the asNumber with calicoctl get node -o yaml > xx.yaml and add the adNumber below the bgp parameter.)
+    logSeverityScreen: Info
+    nodeToNodeMeshEnabled: false
+kind: BGPConfigurationList
+metadata:

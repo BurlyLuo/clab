@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  labels:
+    app: cni
+  name: cni
+spec:
+  selector:
+    matchLabels:
+      app: cni
+  template:
+    metadata:
+      labels:
+        app: cni
+    spec:
+      containers:
+      - image: burlyluo/nettoolbox
+        name: nettoolbox
+

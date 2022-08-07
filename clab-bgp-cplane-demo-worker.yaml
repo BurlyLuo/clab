@@ -1,0 +1,28 @@
+apiVersion: projectcalico.org/v3
+kind: Node
+metadata:
+  annotations:
+    projectcalico.org/kube-labels: '{"beta.kubernetes.io/arch":"amd64","beta.kubernetes.io/os":"linux","kubernetes.io/arch":"amd64","kubernetes.io/hostname":"clab-bgp-cplane-demo-worker","kubernetes.io/os":"linux","rack":"rack1"}'
+  labels:
+    beta.kubernetes.io/arch: amd64
+    beta.kubernetes.io/os: linux
+    kubernetes.io/arch: amd64
+    kubernetes.io/hostname: clab-bgp-cplane-demo-worker
+    kubernetes.io/os: linux
+    rack: rack1
+  name: clab-bgp-cplane-demo-worker
+spec:
+  addresses:
+  - address: 192.168.5.11/24
+    type: CalicoNodeIP
+  - address: 172.19.0.2
+    type: InternalIP
+  bgp:
+    asNumber: 65005
+    ipv4Address: 192.168.5.11/24
+  orchRefs:
+  - nodeName: clab-bgp-cplane-demo-worker
+    orchestrator: k8s
+status:
+  podCIDRs:
+  - 10.244.1.0/24
