@@ -1,9 +1,9 @@
-# containerlab + kind
+## CONTAINERlab + KinD
 ![](https://github.com/BurlyLuo/clab/blob/master/KinD.png)
-# 1. CONTAINERlab and KinD to deploy a new K8S cluster
+### 1. CONTAINERlab and KinD to deploy a new K8S cluster
 The tool KinD can deploy a K8S cluster quicklly, but all the nodes usder the same subnet, so if want set the nodes under different subnets, CONTAINERlab can provide the network resources.
 
-# 2. Deploy the K8S cluster with KinD:
+### 2. Deploy the K8S cluster with KinD:
 ```
 git clone https://github.com/BurlyLuo/clab.git
 root@hive:~/local/clab# kind create cluster --config=./kind-calico.yaml --image=kindest/node:v1.23.4
@@ -30,7 +30,7 @@ clab-bgp-cplane-demo-worker3         NotReady   <none>                 14m   v1.
 ```
 
 ![](https://github.com/BurlyLuo/clab/blob/master/CONTAINERlab.png)
-# 3. Deploy the network resources with CONTAINERlab
+### 3. Deploy the network resources with CONTAINERlab
 ```
 # brctl addbr br-leaf0
 # ifconfig br-leaf0 up
@@ -78,7 +78,7 @@ Run 'containerlab version upgrade' to upgrade or go check other installation opt
 | 8 | clab-bgp-cplane-demo-spine1  | 66b8e593dae2 | vyos/vyos:1.2.8            | linux | running | 172.20.20.3/24 | 2001:172:20:20::3/64 |
 +---+------------------------------+--------------+----------------------------+-------+---------+----------------+----------------------+
 ```
-#4. There is key note that how to combine the network resources which create by CONTAINERlab with KinD:
+### 4. There is key note that how to combine the network resources which create by CONTAINERlab with KinD:
     server1:
       kind: linux
       image: burlyluo/nettoolbox:latest
