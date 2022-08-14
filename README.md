@@ -1,6 +1,6 @@
 # containerlab + kind
 ![](https://github.com/BurlyLuo/clab/blob/master/KinD.png)
-# 1. how to combine CONTAINERlab and KinD to deploy a new K8S cluster?
+# 1.CONTAINERlab and KinD to deploy a new K8S cluster
 The tool KinD can deploy a K8S cluster quicklly, but all the nodes usder the same subnet, so if want set the nodes under different subnets, CONTAINERlab can provide the network resources.
 
 # 2. Deploy the K8S cluster with KinD:
