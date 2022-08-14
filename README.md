@@ -78,6 +78,7 @@ Run 'containerlab version upgrade' to upgrade or go check other installation opt
 | 8 | clab-bgp-cplane-demo-spine1  | 66b8e593dae2 | vyos/vyos:1.2.8            | linux | running | 172.20.20.3/24 | 2001:172:20:20::3/64 |
 +---+------------------------------+--------------+----------------------------+-------+---------+----------------+----------------------+
 ```
+
 ### 4. There is key note that how to combine the network resources which create by CONTAINERlab with KinD:
     server1:
       kind: linux
